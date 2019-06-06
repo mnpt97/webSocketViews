@@ -3,12 +3,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="controll.css">
     <title>Controller</title>
 </head>
 <body>
-    <button onclick="toView(0)">Home</button>
-    <button onclick="toView(1)">View 1</button>
-    <button onclick="toView(2)">Color<br>Switcher</button>
+    <button class = 'button1' onclick="toView(0)">Home</button>
+    <button class = 'button1' onclick="toView(1)">Color<br>Switcher</button>
+    <button id = 'buttonAni' onclick="toView(2)">Animations<br>▼</button>
+    <button id = 'buttonTest1' onclick="toView(0)">Testing</button>
+    <button id = 'buttonTest2' onclick="toView(0)">Testing2</button>
     <script src="/socket.io/socket.io.js"></script>
     <script src="controll.js"></script>
     

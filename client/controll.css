@@ -1,0 +1,4 @@
+body,html{margin: 0; background-color: black;}
+.button1, #buttonAni, #buttonTest1, #buttonTest2{
+    font-size: 15px; font-family: Arial, Helvetica, sans-serif; padding: 5px;
+    margin: 0; border: none; float:left; color: white;}

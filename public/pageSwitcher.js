@@ -1,10 +1,10 @@
-let url = 'http://localhost:3000';
+let url = 'http://192.168.2.116:3000';
 let socket = io();
 
 let page = {
     0: '/view/home.htm',
-    1: '/view/view.htm',
-    2: '/view/colorSwitch/colorSwitch.htm'
+    1: '/view/colorSwitch/colorSwitch.htm',
+    2: '/view/pixelAnimations/pixelAnimations.htm'
 }
 
 socket.on('changeView', (num) => {
