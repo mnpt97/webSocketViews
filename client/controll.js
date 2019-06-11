@@ -1,4 +1,4 @@
-
+const buttonIDs = ['buttonAni', 'buttonTest1', 'buttonTest2'];
 
 let socket = io();
 
@@ -7,13 +7,17 @@ changeBackground = (color) => {
     socket.emit('changeBGcolor', color);
 }
 
-toView = (pageNo) =>{
+toView = (pageNo, id) =>{
     socket.emit('changeView', pageNo)
+    console.log(id)
+    if(buttonIDs.includes(id)){
+        expandButton(id)
+    }
 }
 
 let winWi = window.innerWidth;
 let winHe = window.innerHeight;
-const buttonIDs = ['buttonAni', 'buttonTest1', 'buttonTest2'];
+
 
 init = () =>{
     let r;
@@ -25,8 +29,8 @@ init = () =>{
         r = Math.random(0,1)*150;
         g = Math.random(0,1)*150;
         b = Math.random(0,1)*150;
-        buttons1[i].style.width = winWi /4 +'px'
-        buttons1[i].style.height = winHe /6 +'px'
+        buttons1[i].style.width = winWi * (1/3.3) +'px'
+        buttons1[i].style.height = winHe * (1/6) +'px'
         buttons1[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`
     }
     for(i = 0; i < buttonIDs.length; i++){
@@ -34,25 +38,33 @@ init = () =>{
         r = Math.random(0,1)*150;
         g = Math.random(0,1)*150;
         b = Math.random(0,1)*150;
-        button2.style.width = winWi /2 +'px'
-        button2.style.height = winHe /6 +'px'
+        button2.style.width = winWi *(1/3.3) +'px'
+        button2.style.height = winHe *(1/6) +'px'
         button2.style.backgroundColor = 'rgb('+r+', '+g+','+ b+')'
     }
     
     
+    
 }
 
-listenClick = (buttons) =>{
-    console.log(buttons)
-    for(i = 0; i <buttons.length; i++){
-        buttons[i].addEventListener('click', (e) =>{
-            console.log(buttons,e)
-            expandButton(buttons, i)
-        }, false)
+
+expandButton = (id) =>{
+    console.log('in expand')
+    let button = document.getElementById(id);
+    
+    console.log(buttonExp[id][0])
+    console.log(buttonExp[id]['value'])
+    if(buttonExp[id]['value'] === 0){
+        button.innerHTML += buttonExp[id][0]
+        button.style.height = winHe / 3 +'px'
+        buttonExp[id]['value'] = 1
+        console.log(buttonExp[id]['value'])
     }
-}
-
-expandButton = (buttons, i) =>{
+    else if(buttonExp[id]['value'] === 1){
+        button.innerHTML = buttonExp[id]['base']
+        button.style.height = winHe / 6 +'px'
+        buttonExp[id]['value'] = 0
+    }
     
 }
 

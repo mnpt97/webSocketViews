@@ -7,12 +7,13 @@
     <title>Controller</title>
 </head>
 <body>
-    <button class = 'button1' onclick="toView(0)">Home</button>
-    <button class = 'button1' onclick="toView(1)">Color<br>Switcher</button>
-    <button id = 'buttonAni' onclick="toView(2)">Animations<br>▼</button>
-    <button id = 'buttonTest1' onclick="toView(0)">Testing</button>
-    <button id = 'buttonTest2' onclick="toView(0)">Testing2</button>
+    <div class = 'button1' onclick="toView(0, 0)">Home</div>
+    <div class = 'button1' onclick="toView(1, 1)">Color<br>Switcher</div>
+    <div id = 'buttonAni'  onclick="toView(2, id)">Animations<br></div>
+    <div id = 'buttonTest1' onclick="toView(0,1)">Testing</div>
+    <div id = 'buttonTest2' onclick="toView(0,1)">Testing2</div>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="controllButtonExpansion.js"></script>
     <script src="controll.js"></script>
     
 </body>
