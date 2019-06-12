@@ -19,6 +19,10 @@ io.on('connection', (socket) =>{
     socket.on('changeView', (pageNo) =>{
         io.emit('changeView', pageNo)
     })
+    socket.on('changeParams', (obj) =>{
+        console.log('index', obj)
+        io.emit(obj[0], obj)
+    })
     
     
     

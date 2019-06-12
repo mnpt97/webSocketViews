@@ -1,4 +1,10 @@
 body,html{margin: 0; background-color: black;}
-.button1, #buttonAni, #buttonTest1, #buttonTest2{
-    font-size: 15px; font-family: Arial, Helvetica, sans-serif; padding: 5px;
-    margin: 0; float:left; color: white; text-align: center;}
+.button0, .button1{
+    font-size: 15px; font-family: Arial, Helvetica, sans-serif; padding: 2%; padding-top: 5%;
+    height: 15%; float:left; color: white; text-align: center; margin: 2%;  width: 23%; vertical-align: middle}
+
+.button0{background-color: blue}
+
+.button1{background-color: red}
+
+.selectAni{width: 100%}

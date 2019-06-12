@@ -1,0 +1,17 @@
+body, html{
+    margin:0; background-color: black; ; font-family: Arial, Helvetica, sans-serif; 
+}
+h2{text-align: center; margin: 0px 0 0 0}
+#wrapper{width: 100%}
+
+a{ text-decoration: none}
+#backButton{
+    margin: 10px; padding: 10px; text-align: center; color: black; background-color: white; font-family: Arial, Helvetica, sans-serif; 
+    width: 30%; font-weight: bold;
+}
+#controllBoard{width: 90%; background-color: grey; height: 50%; margin: 20px auto 0 auto; padding: 10px; }
+
+.button0, .button1{
+    font-size: 15px; padding: 2%; padding-top: 5%;
+    height: 10%; float:left; color: white; text-align: center; margin: 2%;  width: 23%; vertical-align: middle}
+.button0{background-color: blue;}

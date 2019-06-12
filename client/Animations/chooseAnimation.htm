@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Choose Animation</title>
+    <link rel="stylesheet" href="chooseAnimationStyle.css">
+</head>
+<body>
+    
+    <div id="wrapper">
+        <a href="../controller.htm"><div id = 'backButton'>Back</div></a>
+        <div id="controllBoard">
+            <h2>Controlls</h2>
+            <div id="innerControll">
+
+            </div>
+        </div>
+        <div id="choices">
+            <div class = 'button0' onclick="chooseAnimation(1,'cSwitch')">Color<br>Switcher</div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="controllBoardOptions.js"></script>
+    <script src="animationCSS_JS/cSwitch.js"></script>
+    <script src="chooseAnimation.js"></script>
+
+</body>
+</html>

@@ -10,3 +10,4 @@ const page = {
 socket.on('changeView', (num) => {
     window.location.href = url + page[num]
 })
+
