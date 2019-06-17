@@ -5,6 +5,7 @@ let socket = io();
 
 
 chooseAnimation = (pageNo, cboID) => {
+    //emit pageNo to page Switcher
     socket.emit('changeView', pageNo);
 
     let cboDiv = document.getElementById('innerControll');

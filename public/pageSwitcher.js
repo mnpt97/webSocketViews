@@ -4,10 +4,9 @@ let socket = io();
 const page = {
     0: '/view/home.htm',
     1: '/view/colorSwitch/colorSwitch.htm',
-    2: '/view/pixelAnimations/pixelAnimations.htm'
+    'bouncingBalls': '/view/Animations/bouncingBalls/bouncingBalls_pub.htm'
 }
 
-socket.on('changeView', (num) => {
-    window.location.href = url + page[num]
+socket.on('changeView', (id) => {
+    window.location.href = url + page[id]
 })
-
