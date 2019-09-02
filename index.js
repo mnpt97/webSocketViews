@@ -17,6 +17,7 @@ io.on('connection', (socket) =>{
         io.emit('changeBGcolor', color)
     })
     socket.on('changeView', (pageNo) =>{
+        console.log(pageNo)
         io.emit('changeView', pageNo)
     })
     socket.on('changeParams', (obj) =>{

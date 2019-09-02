@@ -1,0 +1,8 @@
+html,body{margin: 0; background-color: black; font-family: Arial, Helvetica, sans-serif}
+#backButton{
+    margin: 10px; padding: 10px 15px 10px 15px; text-align: center; color: black; background-color: white; 
+    font-weight: bold; width: 20%; border-radius: 20px;
+}
+#wrapper{display:flex; width: 100%; background-color: white;}
+.button{width: 30%; margin: 10px 1.5%; background-color: rgb(50,50,200); 
+    border-radius: 20px; color: white; padding: 15px 0;text-align: center;}
